@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick="click1()">Click me</button>
+
+    <input type="text" placeholder="Enter Name">
+
+    <input type="text" name="" id="">
+    <button onclick="display()">Submit</button>
+    <h1></h1> -->
+
+
+
+
+
+
+
+    <input type="text" placeholder="Enter a Number">
+    <button onclick="guessingNumber()">Check</button>
+
+    <script>
+
+        let genNum=Math.round(Math.random()*100)
+        console.log(genNum);
+
+        let num=88
+
+        function guessingNumber(){
+
+            let input=document.getElementsByTagName("input")
+            let value=input[0].value;
+            console.log(value);
+
+            if (value==num){
+                
+                console.log("Congratulations, your guess is correct.")
+            }
+            else{
+                if (value<num){
+                    console.log("your value is low");
+                    
+                }
+                else if(value>num){
+                    console.log("Your value is high");
+                    
+                }
+                else{
+                    console.log("your guess is incorrect.")
+                }
+                
+            }
+            
+
+        }
+        guessingNumber();
+
+        // function click1(){
+        //     alert("button clicked")
+        // }
+
+        // function enter(){
+        //     document.getElementsByTagName("button")[0].style.backgroundColor="red"
+        // }
+
+        // function display(){
+        //     let inp=document.getElementsByTagName("input")[0]
+        //     console.log(inp);
+
+        //     console.log(inp[0].value)
+        // }
+
+
+
+
+        // function display(){
+        //     let inp=document.querySelector("input");
+        //     let value=inp.value;
+        //     console.log(value)
+
+        //     document.querySelector("h1").textContent=value
+        // }
+
+    </script>
+</body>
+</html>

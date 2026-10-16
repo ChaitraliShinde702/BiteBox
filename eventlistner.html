@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            border: 1px solid;
+        }
+
+        #grandparent{
+            height: 500px;
+            width: 700px;
+            background-color: red;
+        }
+
+        #parent{
+            height: 300px;
+            width: 500px;
+            background-color: yellow;
+        }
+
+        #child{
+            height: 100px;
+            width: 300px;
+            background-color: rgb(84, 84, 233);
+        }
+    </style>
+
+</head>
+<body>
+    <div id="grandparent">
+        <div id="parent">
+            <div id="child">
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        function red(event){
+            event.stopPropagation()
+            alert("red box is clicked")
+        }
+
+        function yellow(event){
+            event.stopPropagation()
+            alert("yellow box is clicked")
+        }
+
+        function blue(event){
+            event.stopPropagation()
+            alert("blue box is clicked")
+        }
+
+        let grandparent=document.querySelector("#grandparent");
+        grandparent.addEventListener("click", red)
+
+        let parent=document.querySelector("#parent")
+        parent.addEventListener("click", yellow)
+
+        let child=document.querySelector("#child")
+        child.addEventListener("click", blue)
+        
+
+    </script>
+</body>
+</html>
